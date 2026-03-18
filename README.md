@@ -51,5 +51,8 @@ To avoid redundancy, I use drop_first=True in pd.get_dummies().
 Verify Encoding
 I use df.head() again to check that the categorical columns are correctly converted to binary format.
 
+![images](https://github.com/user-attachments/assets/912a3049-1c76-46bb-97db-fcb3703c86ed)
 
-    ![images](https://github.com/user-attachments/assets/0c49ced5-e9f5-4d9a-af44-dbdff38e5aca)
+
+
+   
