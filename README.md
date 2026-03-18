@@ -53,6 +53,8 @@ z → [0, 0, 1]
 
          I use df.head() again to check that the categorical columns are correctly converted to               binary format.
 
+     
+     
 ![images](https://github.com/user-attachments/assets/912a3049-1c76-46bb-97db-fcb3703c86ed)
 
 
