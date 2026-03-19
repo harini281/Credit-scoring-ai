@@ -57,6 +57,57 @@ z → [0, 0, 1]
      
 ![images](https://github.com/user-attachments/assets/912a3049-1c76-46bb-97db-fcb3703c86ed)
 
+8)Split Features and Target
 
+    I separate the dataset into features (X) and target (y).
 
+    I check which columns exist in the dataset using df.columns.
+
+    I assume the target column is Annual Income. I drop this column from X to use it only in y.
+
+    I verify the number of columns in X using X.shape.
+
+9)Train-Test Split
+
+    I split the data into training and testing sets using train_test_split from scikit-learn:
+
+     from sklearn.model_selection import train_test_split
+     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+
+10) I use 80% of the data for training and 20% for testing.
+
+11)Create the Model
+
+       I use a Random Forest Regressor to predict Annual Income:
+
+     from sklearn.ensemble import RandomForestRegressor
+      model = RandomForestRegressor(n_estimators=100, random_state=42)
+
+    n_estimators=100 defines the number of trees in the forest.
+
+    random_state=42 ensures reproducibility.
+
+12)Train the Model
+
+    I train the model to learn patterns in the data using:
+
+    model.fit(X_train, y_train)
+
+13)Make Predictions
+
+    I predict the target for the test set using:
+
+    y_pred = model.predict(X_test)
+
+14)Evaluate the Model
+
+    I evaluate the model using several metrics:
+
+Mean Absolute Error (MAE) – average absolute difference between predicted and actual values.
+
+Mean Squared Error (MSE) – penalizes larger errors more heavily.
+
+R² Score – explains how much variation in the target is explained by the model.
+
+My model achieved an R² of 0.62, meaning it explains 62% of the variation in Annual Income.
    
